@@ -57,8 +57,8 @@
     <distMgmtStagingUrl>https://repository.apache.org/service/local/staging/deploy/maven2</distMgmtStagingUrl>
 
     <clover.license>${user.home}/clover.license</clover.license>
-    <guava.version>31.1-jre</guava.version>
-    <hadoop.version>3.3.1</hadoop.version>
+    <guava.version>14.0.1</guava.version>
+    <hadoop.version>3.0.0-cdh6.3.2</hadoop.version>
     <netty.version>4.1.72.Final</netty.version>
     <pig.version>0.13.0</pig.version>
     <jersey.version>1.19</jersey.version>
@@ -101,6 +101,14 @@
       <name>${distMgmtSnapshotsName}</name>
       <url>${distMgmtSnapshotsUrl}</url>
     </repository>
+    <repository>
+      <id>cloudera</id>
+      <url>https://repository.cloudera.com/artifactory/cloudera-repos/</url>
+      <name>Cloudera Repositories</name>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
   </repositories>
 
   <pluginRepositories>
@@ -115,6 +123,11 @@
       <name>${distMgmtSnapshotsName}</name>
       <url>${distMgmtSnapshotsUrl}</url>
       <layout>default</layout>
+    </pluginRepository>
+    <pluginRepository>
+      <id>cloudera</id>
+      <name>Cloudera Repositories</name>
+      <url>https://repository.cloudera.com/artifactory/cloudera-repos/</url>
     </pluginRepository>
   </pluginRepositories>
 
@@ -778,8 +791,8 @@
     <module>tez-examples</module>
     <module>tez-tests</module>
     <module>tez-dag</module>
-    <module>tez-ext-service-tests</module>
-    <module>tez-ui</module>
+<!--    <module>tez-ext-service-tests</module>-->
+<!--    <module>tez-ui</module>-->
     <module>tez-plugins</module>
     <module>tez-tools</module>
     <module>hadoop-shim-impls</module>
